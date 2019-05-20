@@ -6,8 +6,8 @@ To export an existing MSSQL database, reachable on the network, run following co
 
 ```
 
- docker run -ti -v <LOCAL_DIRECTORY>:/sql_data_volume  kallsu/sql-server-tool \
-    /opt/sqlpackage/./sqlpackage /a:Export /ssn:<DNS_NAME_OR_IPL>,<PORT> /sdn:<DB_NAME> /su:<USERNAME> /sp:<USER_PWD> /tf:/sql_volume/<FILE_NAME>
+ docker run -ti -v LOCAL_DIRECTORY:/sql_data_volume  kallsu/sql-server-tool \
+    /opt/sqlpackage/./sqlpackage /a:Export /ssn:DNS_NAME_OR_IPL,PORT /sdn:DB_NAME /su:USERNAME /sp:USER_PWD /tf:/sql_volume/FILE_NAME
  
 ```
 
@@ -38,9 +38,5 @@ Other possible combinations are allowed according specific cases, in these cases
 
 
 **Note** : The documentation is written by Windows CLI interpreter, under Linux the command differs a bit.
-
-## EXPORT MSSQL structure
-
-
 
 ## IMPORT
