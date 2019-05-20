@@ -55,3 +55,7 @@ Example:
 ```
 
 As above, the documentation of import is available on the [SqlPackage website](https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-2017#import-parameters-and-properties)
+
+## Notes
+
+In the github repository there is a *docker-compose.yml* to show how compose this docker image.

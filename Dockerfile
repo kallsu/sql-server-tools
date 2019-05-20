@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         bzr git mercurial openssh-client procps ca-certificates curl netbase wget \
         libc6 libgcc1 libgssapi-krb5-2 libicu57 liblttng-ust0 libssl1.0.2 libstdc++6 zlib1g \
-        curl apt-transport-https software-properties-common locales apt-utils libunwind8 gpg \
+        curl apt-transport-https software-properties-common locales apt-utils libunwind8 gpg wait-for-it \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo 'deb [arch=amd64] https://packages.microsoft.com/debian/9/prod stretch main' > /etc/apt/sources.list.d/mssql-release.list

@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  database:
+    image: mcr.microsoft.com/mssql/server:latest
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Passw0rd1234!
+  
+  sql_tools:
+    image: kallsu/sql-server-tool:latest
+    volumes:
+      - sql_volume:/sql_volume
+    command: ["wait-for-it", "database:1433", "--", "/opt/sqlpackage/./sqlpackage", "/a:Export /ssn:database,1433 /sdn:docker_test /su:sa /sp:Passw0rd1234! /tf:/sql_volume/test.bacpac"]
+    depends_on:
+      - database
+
+        
+volumes:
+  sql_volume:
