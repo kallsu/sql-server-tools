@@ -34,7 +34,7 @@ The command will be:
 
 ```
 
-Other possible combinations are allowed according specific cases, in these cases please visit the document of (SQLPackage here)[https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-2017#export-parameters-and-properties]
+Other possible combinations are allowed according specific cases, in these cases please visit the document of [SQLPackage here](https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-2017#export-parameters-and-properties)
 
 
 **Note** : The documentation is written by Windows CLI interpreter, under Linux the command differs a bit.
